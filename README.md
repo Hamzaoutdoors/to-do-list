@@ -1,10 +1,12 @@
 # webpack-template
-The project is a boiler template for a project that is to be build using webpack.
 
-The template allows for easy setup and faster development of Webpack based proejcts.
+The project's goal is to learn how to use webpack. "To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. You will build a simple website that allows for doing that, and you will do it using ES6 and Webpack!
+
+# To-DO-List Live Demo
+[Live demo](https://hamzaoutdoors.github.io/to-do-list/)
 
 # Built with 
-
+- HTML, CSS, JS, ES6
 - Webpack
 - fix errors with Linters
 - Features of webpack and plugins already included
@@ -17,18 +19,19 @@ The template allows for easy setup and faster development of Webpack based proej
 
 - Navigate to your desired directory in your local machine using the terminal.
 
-- Clone repository by running git clone git@github.com:Hamzaoutdoors/to-do-list.git in your local terminal
+- Clone repository by running git clone ```git@github.com:Hamzaoutdoors/to-do-list.git``` in your local terminal
 
 - Run the following command to install the needed dependencies
-npm install
+```npm install```
 
-- Use the following commands to npm run start to start the Webpack Dev server and serve the files from the dist directory npm run build to complile build all source files into the dist directory npm run watch to set webpack into watch mode so that the build is automatically run whenever changes are made to any of the source files.
+- Use the following commands to npm run start to start the Webpack Dev server and serve the files from the dist directory npm run build to complile build all source files into the dist directory ```npm run watch``` to set webpack into watch mode so that the build is automatically run whenever changes are made to any of the source files.
 
 # Authors
 
 👤 **EllaouziHamza**
 
 - GitHub: [hamzaoutdoors](https://github.com/Hamzaoutdoors)
+- LinkedIn : [Hamza Ellaouzi](https://www.linkedin.com/in/hamza-ellaouzi-137a45b8/)
 # 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!

@@ -4,11 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wbpack Exercise</title>
+    <title>My ToDoList</title>
 </head>
 
 <body>
-    <h1>Hello webpack!</h1>
+    <div class="header">
+        <h1>To DO List</h1>
+        <p>Manage your time and energy with this To-do-list tool</p>
+    </div>
+    <div class="container">
+        <ul>
+            <li>
+                 <h3>Today's To Do</h3>
+                 <img src="https://img.icons8.com/metro/26/000000/process.png" alt="update-icon"/>
+            </li>
+            <li>
+                <form action="get" class="d-flex">
+                    <input type="text" id="input" placeholder="Add a to-do ...">
+                    <img src="https://img.icons8.com/ios/50/000000/enter-2.png" alt="enter-key-icon"/>
+                </form>
+            </li>
+        </ul>
+        <div class="clear">
+            <p>Clear all completed</p>
+        </div>
+    </div>
 </body>
 
 </html>
