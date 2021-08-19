@@ -72,6 +72,10 @@ form img {
   height: 1.5rem;
 }
 
+.drop:hover {
+  cursor: all-scroll;
+}
+
 .clear {
   display: flex;
   width: 100%;
@@ -86,4 +90,14 @@ form img {
   font-size: 0.8rem;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.clear p:hover {
+  text-shadow: 1px 1px 1px rgb(126, 126, 126);
+  border-bottom: 1px solid #000;
+}
+
+.line-through {
+  text-decoration: line-through;
+  color: #ccc;
 }
