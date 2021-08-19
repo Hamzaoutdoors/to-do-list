@@ -1,4 +1,4 @@
-# webpack-template
+# To Do list : Remove and Add tasks
 
 The project's goal is to learn how to use webpack. "To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. You will build a simple website that allows for doing that, and you will do it using ES6 and Webpack!
 
@@ -9,9 +9,10 @@ The user's to-do list is stored in the local storage, so when he refreshes the p
 # To-DO-List Live Demo
 [Live demo](https://hamzaoutdoors.github.io/to-do-list/)
 
-# Built with 
-- HTML, CSS, JS-ES6
-- Webpack
+# Built with 🔨
+- HTML, CSS,
+- JavaScript-ES6
+- Git & Github
 - Store data with LocalStorage
 - fix errors with Linters
 - Features of webpack and plugins already included
@@ -37,6 +38,7 @@ The user's to-do list is stored in the local storage, so when he refreshes the p
 
 - GitHub: [hamzaoutdoors](https://github.com/Hamzaoutdoors)
 - LinkedIn : [Hamza Ellaouzi](https://www.linkedin.com/in/hamza-ellaouzi-137a45b8/)
+- Twitter: [Hamza Ellaouzi](https://twitter.com/EllaouziHamza)
 # 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
