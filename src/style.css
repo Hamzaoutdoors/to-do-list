@@ -6,10 +6,15 @@ body {
   color: #575757;
 }
 
-h4 {
+.text {
   flex-basis: 90%;
   margin-left: 10px;
   font-size: 1rem;
+  border: none;
+}
+
+.text:focus {
+  outline: none;
 }
 
 ul {
