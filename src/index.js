@@ -10,10 +10,10 @@ const displayItems = () => {
     const BACKGROUND = item.completed ? 'comletedTask' : '';
     const TROUGHLINE = item.completed ? 'line-through' : '';
     item.index = index;
-    ul.innerHTML += `<li class="${BACKGROUND}"><input type="checkbox" class="checkbox" id="checkbox-${item.index}" ${CHECK}><input class="text ${TROUGHLINE}" type="text" value ="${item.description}"><i class="fa fa-ellipsis-v open" aria-hidden="true"></i>
-    </li>`;
+    ul.innerHTML += `<li class="${BACKGROUND}"><input type="checkbox" class="checkbox" id="checkbox-${item.index}" ${CHECK}><input class="text ${TROUGHLINE}" type="text" value ="${item.description}"><i class="fa fa-ellipsis-v open" id="open" aria-hidden="true"></i><i class="fa fa-trash-o" aria-hidden="true" id="trash"></i></li>`;
   });
   IsCompleted.completeToDo(tasks);
+  IsCompleted.changeIcon(tasks);
 };
 displayItems();
 

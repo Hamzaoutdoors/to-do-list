@@ -78,7 +78,7 @@ form img {
   height: 1.5rem;
 }
 
-.drop:hover {
+#open {
   cursor: all-scroll;
 }
 
@@ -108,11 +108,12 @@ form img {
   color: #ccc;
 }
 
-.comletedTask {
-  background-color: #f2f8fb;
-}
-
 #list {
   padding: 0 10px 10px 10px;
   margin: 0;
+}
+
+#list #trash {
+  display: none;
+  cursor: pointer;
 }
