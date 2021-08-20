@@ -1,5 +1,5 @@
+/* eslint-disable no-use-before-define */
 import './style.css';
-import { values } from 'lodash';
 import IsCompleted from './modules/Status.js';
 
 let tasks = JSON.parse(localStorage.getItem('ToDo')) || [];
@@ -12,7 +12,7 @@ const displayItems = () => {
     const CHECK = item.completed ? 'checked' : '';
     const TROUGHLINE = item.completed ? 'line-through' : '';
     item.index = index;
-    ul.innerHTML += `<li id="${item.index}"><input type="checkbox" class="checkbox" id="checkbox-${item.index}" ${CHECK}><input class="text ${TROUGHLINE}" type="text" value ="${item.description}"><i class="fa fa-ellipsis-v open" aria-hidden="true"></i><i class="fa fa-trash-o trash d-none" aria-hidden="true"></i></li>`;
+    ul.innerHTML += `<li id="${item.index}"><input type="checkbox" class="checkbox" id="checkbox-${item.index}" ${CHECK}><input class="text ${TROUGHLINE} text-${item.index}" type="text" value ="${item.description}"><i class="fa fa-ellipsis-v open" aria-hidden="true"></i><i class="fa fa-trash-o trash d-none" aria-hidden="true"></i></li>`;
   });
   IsCompleted.completeToDo(tasks);
   IsCompleted.changeIcon();
@@ -89,11 +89,9 @@ function editDesc() {
   const ul = document.getElementById('list');
   const inputs = document.querySelectorAll('.text');
   inputs.forEach((input, index) => {
-    input.addEventListener('keydown', (e) => {
-      const { value } = input;
-      console.log(value);
-      if (e.key === 'Enter' && value !== '') {
-        console.log('i am in');
+    ul.addEventListener('keydown', (e) => {
+      const { value } = e.target;
+      if (e.target.className.includes(`text-${index}`) && e.key === 'Enter' && value !== '') {
         tasks[index].description = value;
         ul.innerHTML = '';
         displayItems();
