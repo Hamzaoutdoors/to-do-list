@@ -21,23 +21,28 @@ export default class IsCompleted {
     });
   }
 
-  static changeIcon(list) {
+  static changeIcon() {
     this.inputs = document.querySelectorAll('.text');
     this.trashs = document.querySelectorAll('.trash');
     this.inputs.forEach((input, index) => {
       input.addEventListener('focus', () => {
-        this.trashs[index].style.display = 'flex';
-        input.parentNode.querySelector('.open').style.display = 'none';
+        this.trashs[index].classList.toggle('d-none');
+        input.parentNode.querySelector('.open').classList.toggle('d-none');
         input.parentNode.style.backgroundColor = '#f9f9f9';
         input.style.backgroundColor = '#f9f9f9';
-        IsCompleted.updateLocalStorage(list);
-      });
-      input.addEventListener('blur', () => {
-        this.trashs[index].style.display = 'none';
-        input.parentNode.querySelector('.open').style.display = 'flex';
-        input.parentNode.style.backgroundColor = '';
-        input.style.backgroundColor = '';
-        IsCompleted.updateLocalStorage(list);
+
+        const allLi = document.querySelector('#list').childNodes;
+
+        allLi.forEach((list) => {
+          const innerInput = list.querySelector('.text');
+
+          if (innerInput !== input) {
+            innerInput.parentNode.querySelector('.trash').className = 'fa fa-trash-o trash d-none';
+            innerInput.parentNode.querySelector('.open').classList.remove('d-none');
+            innerInput.parentNode.style.backgroundColor = '';
+            innerInput.style.backgroundColor = '';
+          }
+        });
       });
     });
   }

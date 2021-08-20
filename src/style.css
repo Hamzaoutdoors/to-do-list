@@ -116,6 +116,9 @@ form img {
 }
 
 #list .trash {
-  display: none;
   cursor: pointer;
+}
+
+.d-none {
+  display: none !important;
 }

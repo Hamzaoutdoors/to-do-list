@@ -1,4 +1,5 @@
 import './style.css';
+import { values } from 'lodash';
 import IsCompleted from './modules/Status.js';
 
 let tasks = JSON.parse(localStorage.getItem('ToDo')) || [];
@@ -11,10 +12,10 @@ const displayItems = () => {
     const CHECK = item.completed ? 'checked' : '';
     const TROUGHLINE = item.completed ? 'line-through' : '';
     item.index = index;
-    ul.innerHTML += `<li id="${item.index}"><input type="checkbox" class="checkbox" id="checkbox-${item.index}" ${CHECK}><input class="text ${TROUGHLINE}" type="text" value ="${item.description}"><i class="fa fa-ellipsis-v open" aria-hidden="true"></i><i class="fa fa-trash-o trash" aria-hidden="true"></i></li>`;
+    ul.innerHTML += `<li id="${item.index}"><input type="checkbox" class="checkbox" id="checkbox-${item.index}" ${CHECK}><input class="text ${TROUGHLINE}" type="text" value ="${item.description}"><i class="fa fa-ellipsis-v open" aria-hidden="true"></i><i class="fa fa-trash-o trash d-none" aria-hidden="true"></i></li>`;
   });
   IsCompleted.completeToDo(tasks);
-  IsCompleted.changeIcon(tasks);
+  IsCompleted.changeIcon();
 };
 displayItems();
 
@@ -39,6 +40,7 @@ function addToTheList() {
       event.preventDefault();
     }
   });
+  editDesc();
 }
 addToTheList();
 
@@ -59,17 +61,45 @@ clearAllCompleted();
 // Remove Item from the list
 
 function remove() {
-  const trashs = document.querySelectorAll('.trash');
-  const ul = document.getElementById('list');
-  trashs.forEach((trash) => {
-    trash.addEventListener('click', (e) => {
+  window.addEventListener('click', (e) => {
+    const ul = document.getElementById('list');
+    if (e.target && e.target.className.includes('trash')) {
       const id = parseInt(e.target.parentNode.id, 10);
-      console.log(id);
       tasks = tasks.filter((task) => task.index !== id);
       ul.innerHTML = '';
       displayItems();
       IsCompleted.updateLocalStorage(tasks);
+    } else if (e.target && !e.target.className.includes('text')) {
+      const allLi = document.querySelector('#list').childNodes;
+      allLi.forEach((list) => {
+        const innerInput = list.querySelector('.text');
+
+        innerInput.parentNode.querySelector('.trash').className = 'fa fa-trash-o trash d-none';
+        innerInput.parentNode.querySelector('.open').classList.remove('d-none');
+        innerInput.parentNode.style.backgroundColor = '';
+        innerInput.style.backgroundColor = '';
+      });
+    }
+  });
+}
+
+remove();
+
+function editDesc() {
+  const ul = document.getElementById('list');
+  const inputs = document.querySelectorAll('.text');
+  inputs.forEach((input, index) => {
+    input.addEventListener('keydown', (e) => {
+      const { value } = input;
+      console.log(value);
+      if (e.key === 'Enter' && value !== '') {
+        console.log('i am in');
+        tasks[index].description = value;
+        ul.innerHTML = '';
+        displayItems();
+        IsCompleted.updateLocalStorage(tasks);
+      }
     });
   });
 }
-remove();
+editDesc();
