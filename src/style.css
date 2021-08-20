@@ -19,6 +19,7 @@ body {
 
 ul {
   padding: 10px;
+  padding-bottom: 0;
 }
 
 li {
@@ -105,4 +106,13 @@ form img {
 .line-through {
   text-decoration: line-through;
   color: #ccc;
+}
+
+.comletedTask {
+  background-color: #f2f8fb;
+}
+
+#list {
+  padding: 0 10px 10px 10px;
+  margin: 0;
 }

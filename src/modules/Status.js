@@ -10,6 +10,7 @@ export default class IsCompleted {
       checkbox.addEventListener('change', function checked() {
         if (this.checked) {
           checkbox.parentNode.querySelector('.text').classList.add('line-through');
+          console.log(checkbox.parentNode);
           list[index].completed = true;
         } else {
           checkbox.parentNode.querySelector('.text').classList.remove('line-through');
