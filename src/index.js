@@ -4,8 +4,6 @@ import IsCompleted from './modules/Status.js';
 
 let tasks = JSON.parse(localStorage.getItem('ToDo')) || [];
 
-// Display Items in the UI
-
 const displayItems = () => {
   const ul = document.getElementById('list');
   tasks.forEach((item, index) => {
@@ -19,12 +17,12 @@ const displayItems = () => {
 };
 displayItems();
 
-function clearItems() {
+const clearItems = () => {
   const ul = document.getElementById('list');
   ul.innerHTML = '';
-}
+};
 
-function addToTheList() {
+const addToTheList = () => {
   const input = document.getElementById('input');
   input.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
@@ -40,13 +38,10 @@ function addToTheList() {
       event.preventDefault();
     }
   });
-  editDesc();
-}
+};
 addToTheList();
 
-// Clear All Completed button
-
-function clearAllCompleted() {
+const clearAllCompleted = () => {
   const ul = document.getElementById('list');
   const clearItems = document.getElementById('clear-items-completed');
   clearItems.addEventListener('click', () => {
@@ -55,12 +50,10 @@ function clearAllCompleted() {
     displayItems();
     IsCompleted.updateLocalStorage(tasks);
   });
-}
+};
 clearAllCompleted();
 
-// Remove Item from the list
-
-function remove() {
+const remove = () => {
   window.addEventListener('click', (e) => {
     const ul = document.getElementById('list');
     if (e.target && e.target.className.includes('trash')) {
@@ -81,11 +74,11 @@ function remove() {
       });
     }
   });
-}
+};
 
 remove();
 
-function editDesc() {
+const editDesc = () => {
   const ul = document.getElementById('list');
   const inputs = document.querySelectorAll('.text');
   inputs.forEach((input, index) => {
@@ -99,5 +92,5 @@ function editDesc() {
       }
     });
   });
-}
+};
 editDesc();
