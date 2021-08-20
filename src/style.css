@@ -6,14 +6,21 @@ body {
   color: #575757;
 }
 
-h4 {
+.text {
   flex-basis: 90%;
   margin-left: 10px;
   font-size: 1rem;
+  border: none;
+  background-color: #fff;
+}
+
+.text:focus {
+  outline: none;
 }
 
 ul {
   padding: 10px;
+  padding-bottom: 0;
 }
 
 li {
@@ -33,6 +40,7 @@ li {
 
 li img {
   height: 1rem;
+  cursor: pointer;
 }
 
 .d-flex {
@@ -72,7 +80,7 @@ form img {
   height: 1.5rem;
 }
 
-.drop:hover {
+#open {
   cursor: all-scroll;
 }
 
@@ -100,4 +108,17 @@ form img {
 .line-through {
   text-decoration: line-through;
   color: #ccc;
+}
+
+#list {
+  padding: 0 10px 10px 10px;
+  margin: 0;
+}
+
+#list .trash {
+  cursor: pointer;
+}
+
+.d-none {
+  display: none !important;
 }
