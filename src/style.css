@@ -11,6 +11,7 @@ body {
   margin-left: 10px;
   font-size: 1rem;
   border: none;
+  background-color: #fff;
 }
 
 .text:focus {
@@ -39,6 +40,7 @@ li {
 
 li img {
   height: 1rem;
+  cursor: pointer;
 }
 
 .d-flex {
@@ -113,7 +115,7 @@ form img {
   margin: 0;
 }
 
-#list #trash {
+#list .trash {
   display: none;
   cursor: pointer;
 }
