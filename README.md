@@ -13,6 +13,7 @@ The user's to-do list is stored in the local storage, so when he refreshes the p
 - HTML, CSS,
 - JavaScript-ES6
 - Git & Github
+- github pages
 - Store data with LocalStorage
 - fix errors with Linters
 - Features of webpack and plugins already included
