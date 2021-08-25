@@ -7,7 +7,7 @@ describe('Remove item from list', ()=> {
         '<div>' +
         '  <ul id="list"></li>' +
         '</div>';
-        addItem();
+        removeItem();
         const list = document.querySelectorAll('#list li');
         expect(list).toHaveLength(list.length - 1);
     }); 
