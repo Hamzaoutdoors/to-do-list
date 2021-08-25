@@ -1,5 +1,5 @@
 
-const addToTheList = () => {
+export default addToTheList = () => {
     const input = document.getElementById('input');
     input.addEventListener('keydown', (event) => {
       if (event.key === 'Enter') {
@@ -16,6 +16,9 @@ const addToTheList = () => {
       }
     });
   };
+
+
+
 
 
 

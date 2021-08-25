@@ -1,4 +1,4 @@
-const remove = () => {
+export default remove = () => {
     window.addEventListener('click', (e) => {
       const ul = document.getElementById('list');
       if (e.target && e.target.className.includes('trash')) {
@@ -20,3 +20,4 @@ const remove = () => {
       }
     });
   };
+
