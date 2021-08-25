@@ -5,7 +5,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
+    "watch": "jest --watch*.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "start": "webpack serve --open",
@@ -22,6 +23,7 @@
     "url": "https://github.com/Hamzaoutdoors/to-do-list/issues"
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.15.0",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.2.0",
     "eslint": "^7.32.0",
@@ -31,6 +33,7 @@
     "gh-pages-deploy": "^0.5.1",
     "hint": "^6.1.4",
     "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.0.6",
     "push-dir": "^0.4.1",
     "style-loader": "^3.2.1",
     "stylelint": "^13.13.1",
