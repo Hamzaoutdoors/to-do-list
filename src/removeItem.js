@@ -1,5 +1,18 @@
-import displayItems from './index.js';
+
 import IsCompleted from './modules/Status.js';
+
+
+const displayItems = () => {
+  const ul = document.getElementById('list');
+  tasks.forEach((item, index) => {
+    const check = item.completed ? 'checked' : '';
+    const lineThrough = item.completed ? 'line-through' : '';
+    item.index = index;
+    ul.innerHTML += `<li id="${item.index}"><input type="checkbox" class="checkbox" id="checkbox-${item.index}" ${check}><input class="text ${lineThrough} text-${item.index}" type="text" value ="${item.description}"><i class="fa fa-ellipsis-v open" aria-hidden="true"></i><i class="fa fa-trash-o trash d-none" aria-hidden="true"></i></li>`;
+  });
+  IsCompleted.completeToDo(tasks);
+  IsCompleted.changeIcon();
+};
 
 export const removeItem = (id) => {
   let tasks = JSON.parse(localStorage.getItem('ToDo')) || [];
