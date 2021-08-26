@@ -1,16 +1,20 @@
 import displayItems from './index.js';
+import IsCompleted from './modules/Status.js';
 
-let tasks = JSON.parse(localStorage.getItem('ToDo')) || [];
+export const removeItem = (id) => {
+  let tasks = JSON.parse(localStorage.getItem('ToDo')) || [];
+  const ul = document.getElementById('list');
+  tasks = tasks.filter((task) => task.index !== id);
+  ul.innerHTML = '';
+  displayItems();
+  IsCompleted.updateLocalStorage(tasks);
+};
 
-export default function remove() {
+export function addRemoveListner() {
   window.addEventListener('click', (e) => {
-    const ul = document.getElementById('list');
     if (e.target && e.target.className.includes('trash')) {
       const id = parseInt(e.target.parentNode.id, 10);
-      tasks = tasks.filter((task) => task.index !== id);
-      ul.innerHTML = '';
-      displayItems();
-      localStorage.setItem('ToDo', JSON.stringify(tasks));
+      removeItem(id);
     } else if (e.target && !e.target.className.includes('text')) {
       const allLi = document.querySelector('#list').childNodes;
       allLi.forEach((list) => {
