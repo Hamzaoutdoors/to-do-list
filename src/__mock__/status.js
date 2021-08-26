@@ -1,5 +1,4 @@
 
-
 jest.mock('../Todo');
 
 const updateLocalStorage = (list) => {

@@ -1,7 +1,6 @@
 
 import IsCompleted from './modules/Status.js';
 
-
 const displayItems = () => {
   const ul = document.getElementById('list');
   tasks.forEach((item, index) => {
