@@ -1,10 +1,15 @@
-# To Do list : Remove and Add tasks
+# To Do list 
 
 The project's goal is to learn how to use webpack. "To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. You will build a simple website that allows for doing that, and you will do it using ES6 and Webpack!
 
 the to-do list we're going to create has a beautiful UI, the user can add a to-do by filling the input and hit ENTER, after that he can rather check the to-do when it's done, or remove it using the delete button.
 
 The user's to-do list is stored in the local storage, so when he refreshes the page, he can always find the list there.
+ 
+ <p align="center">
+    <img alt="Screenshot" src="https://user-images.githubusercontent.com/80895497/130614400-f9fd0272-5d77-49e0-b214-52905238ca9e.PNG" width="500">
+    <p align="center">screen shot of my to-do-list tool</p>
+</p>
 
 # To-DO-List Live Demo
 [Live demo](https://hamzaoutdoors.github.io/to-do-list/)
