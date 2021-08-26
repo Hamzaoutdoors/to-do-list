@@ -1,7 +1,7 @@
-
 import IsCompleted from './modules/Status.js';
 
 const displayItems = () => {
+  const tasks = JSON.parse(localStorage.getItem('ToDo')) || [];
   const ul = document.getElementById('list');
   tasks.forEach((item, index) => {
     const check = item.completed ? 'checked' : '';
