@@ -1,6 +1,10 @@
 {
   "homepage": "git@github.com:Hamzaoutdoors/to-do-list.git",
   "name": "to-do-list",
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "jsdom"
+  },
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -42,9 +46,13 @@
     "stylelint-scss": "^3.20.1",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "@babel/core": "*",
+    "@babel/preset-env": "*",
+    "babel-jest": "*"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "jquery": "*"
   }
 }

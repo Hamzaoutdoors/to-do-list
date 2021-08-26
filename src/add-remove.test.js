@@ -1,21 +1,33 @@
-import removeItem from './removeItem.js';
-import addItem from './addItem.js';
+/**
+ * @jest-environment jsdom
+ */
 
-describe('Remove item from list', () => {
-  test('add one item from the list', () => {
-    document.body.innerHTML = '<div>'
-        + '  <ul id="list"></li>'
-        + '</div>';
-    addItem('hey');
-    const list = document.querySelectorAll('#list li');
-    expect(list).toHaveLength(1);
+ const jsdom = require("jsdom");
+
+import removeItem from './removeItem.js';
+import addTodo from './addItem.js';
+
+
+// import updateLocalStorage from './__mock__'
+
+//let listItem = updateLocalStorage(list)
+
+describe('Remove and item from list', () => {
+
+  test('Check addTodo able add todo to todoList', () => {
+    document.body.innerHTML = `
+      <input id="newTodoInput" />
+      <button id="addTodoBtn">Add todo</button>
+      <ol id="todoList">value</ol>
+    `;
+    
+    const newTodoInput = document.getElementById('newTodoInput');
+    const addTodo = document.getElementById('addTodoBtn');
+    const todolist = document.getElementById('todoList');
+  
+    newTodoInput.value = 'New todolist!';
+    addTodo.click();
+  
+    expect(todolist.innerHTML).toBe("value");
   });
-  // test('remove one item from the list', () => {
-  //   document.body.innerHTML = '<div>'
-  //       + '  <ul id="list"></li>'
-  //       + '</div>';
-  //   removeItem(0);
-  //   const list = document.querySelectorAll('#list li');
-  //   expect(list).toHaveLength(0);
-  // });
 });
