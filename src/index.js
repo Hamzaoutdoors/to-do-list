@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 /* eslint-disable no-use-before-define */
 import './style.css';
 import IsCompleted from './modules/Status.js';
@@ -17,23 +18,24 @@ const displayItems = () => {
 };
 displayItems();
 
-const clearItems = () => {
-  const ul = document.getElementById('list');
-  ul.innerHTML = '';
+export const addItem = () => {
+  const input = document.getElementById('input');
+  const task = input.value;
+  if (task) {
+    const newTask = { description: task, completed: false, index: tasks.length };
+    tasks.push(newTask);
+    const ul = document.getElementById('list');
+    ul.innerHTML = '';
+    displayItems();
+    IsCompleted.updateLocalStorage(tasks);
+  }
 };
 
 const addToTheList = () => {
-  const input = document.getElementById('input');
+  const input = document.addEventListener('DOMContentLoaded', () => document.getElementById('input'));
   input.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
-      const task = input.value;
-      if (task) {
-        const newTask = { description: task, completed: false, index: tasks.length };
-        tasks.push(newTask);
-        clearItems();
-        displayItems();
-        IsCompleted.updateLocalStorage(tasks);
-      }
+      addItem();
       input.value = '';
       event.preventDefault();
     }

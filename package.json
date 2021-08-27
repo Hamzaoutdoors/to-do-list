@@ -1,9 +1,8 @@
 {
-  "homepage": "git@github.com:Hamzaoutdoors/to-do-list.git",
   "name": "to-do-list",
   "jest": {
-    "verbose": true,
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "verbose": true
   },
   "version": "1.0.0",
   "description": "",
@@ -21,14 +20,19 @@
     "url": "git+https://github.com/Hamzaoutdoors/to-do-list.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Hamzaoutdoors",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Hamzaoutdoors/to-do-list/issues"
   },
+  "homepage": "git@github.com:Hamzaoutdoors/to-do-list.git",
   "devDependencies": {
+    "@babel/core": "^7.15.0",
     "@babel/plugin-transform-modules-commonjs": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@nearmap/jest-config": "^1.0.1",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.1.0",
     "css-loader": "^6.2.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -37,6 +41,7 @@
     "gh-pages-deploy": "^0.5.1",
     "hint": "^6.1.4",
     "html-webpack-plugin": "^5.3.2",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.6",
     "push-dir": "^0.4.1",
     "style-loader": "^3.2.1",
@@ -46,13 +51,11 @@
     "stylelint-scss": "^3.20.1",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^3.11.2",
-    "@babel/core": "*",
-    "@babel/preset-env": "*",
-    "babel-jest": "*"
+    "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "jquery": "*",
+    "jdom": "^3.2.1",
+    "jquery": "^3.6.0",
     "jsdom": "^17.0.0",
     "lodash": "^4.17.21"
   }

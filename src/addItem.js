@@ -1,7 +1,10 @@
-export default function addTodo() {
-  const newTodoInput = document.getElementById('newTodo');
-  let currentTodoList = document.getElementById('todoList').innerHTML;
-  currentTodoList += `<li>${newTodoInput.value}</li>`;
-  document.getElementById('todoList').innerHTML = currentTodoList;
-  newTodoInput.value = '';
+export default function addItem(tasks) {
+  const input = document.getElementById('input');
+  const task = input.value;
+  if (task) {
+    const newTask = { description: task, completed: false, index: tasks.length };
+    tasks.push(newTask);
+    displayItems();
+    IsCompleted.updateLocalStorage(tasks);
+  }
 }
