@@ -1,3 +1,4 @@
+
 <p align="center">
   <a href="https://www.microverse.org/">
     <img alt="Microverse" src="https://img.shields.io/badge/-Microverse-blueviolet?style=flat-square">
@@ -26,7 +27,7 @@
   
 # To Do list 
 
-The project's goal is to learn how to use webpack. "To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. You will build a simple website that allows for doing that, and you will do it using ES6 and Webpack!
+The project's goal is to learn how to test following unit test concept with Jest and Mocks. "To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. You will build a simple website that allows for doing that, and you will do it using ES6 and Webpack!
 
 the to-do list we're going to create has a beautiful UI, the user can add a to-do by filling the input and hit ENTER, after that he can rather check the to-do when it's done, or remove it using the delete button.
 
@@ -43,6 +44,7 @@ The user's to-do list is stored in the local storage, so when he refreshes the p
 # Built with 🔨
 - HTML, CSS,
 - JavaScript-ES6
+- Testing with Jest
 - Git & Github
 - github pages
 - Store data with LocalStorage
@@ -70,7 +72,14 @@ The user's to-do list is stored in the local storage, so when he refreshes the p
 
 - GitHub: [hamzaoutdoors](https://github.com/Hamzaoutdoors)
 - LinkedIn : [Hamza Ellaouzi](https://www.linkedin.com/in/hamza-ellaouzi-137a45b8/)
-- Twitter: [Hamza Ellaouzi](https://twitter.com/EllaouziHamza)
+- Twitter: [@HamzaEllaouzi](https://twitter.com/EllaouziHamza)
+
+👤 **DanielSamuel**
+
+- GitHub: [DanSam5K](https://github.com/DanSam5K)
+- LinkedIn : [Daniel Samuel ](https://www.linkedin.com/in/dansamuel/)
+- Twitter: [@DanSM](https://twitter.com/_dan_sam)
+
 # 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
